@@ -1,0 +1,9 @@
+<%- include("partials/header"); -%>
+    <h3><%= pokemonData.name %></h3>
+    <img class="pokemonImage" src="<%= pokemonData.sprites.animated %>" alt="pokemonData.sprites.normal">
+    <br>
+    <br>
+    <p>Height: <%= pokemonData.height %> ft</p>
+    <p>Weight: <%= pokemonData.weight %> lbs</p>
+    <p>Base Experience: <%= pokemonData.base_experience %> lbs</p>
+<%- include("partials/footer"); -%>
