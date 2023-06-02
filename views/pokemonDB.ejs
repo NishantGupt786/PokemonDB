@@ -1,10 +1,10 @@
 <%- include("partials/header"); -%>
     <div class="container">
         <% pokemonarr.forEach(pokemon=>{ %>
-            
+            <div>
                 <img src="<%= pokemon.sprites.normal %>" alt="">
-                <%= pokemon.name %>
-            
+                <div style="margin: auto; text-align: center;"><%= pokemon.name %></div>
+            </div>
         <%})%>
     </div>
 <%- include("partials/footer"); -%>
