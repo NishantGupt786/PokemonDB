@@ -1,9 +1,20 @@
 <%- include("partials/header"); -%>
-    <h3><%= pokemonData.name %></h3>
-    <img class="pokemonImage" src="<%= pokemonData.sprites.animated %>" alt="pokemonData.sprites.normal">
+<div>
+    <h3><%= poke.name.toUpperCase() %></h3>
+    <img class="pokemonImage" src="<%= poke.image.default %>" alt="pokemonData.sprites.normal">
     <br>
-    <br>
-    <p>Height: <%= pokemonData.height %> ft</p>
-    <p>Weight: <%= pokemonData.weight %> lbs</p>
-    <p>Base Experience: <%= pokemonData.base_experience %> lbs</p>
+    <h4>Description</h4>
+    <p><%= poke.description %></p>
+    <h4>Base stats</h4>
+    <p>Type: <%= poke.stats.types.name.type1 %> <%= poke.stats.types.name.type2 %></p>
+    <p>HP: <%= poke.stats.hp %></p>
+    <p>Attack: <%= poke.stats.attack %></p>
+    <p>Defence: <%= poke.stats.defense %></p>
+    <p>Sp Atk: <%= poke.stats.specialAttack %></p>
+    <p>Sp Def: <%= poke.stats.specialDefense %></p>
+    <p>Speed: <%= poke.stats.speed %></p>
+    <p>Height: <%= poke.stats.height %> ft</p>
+    <p>Weight: <%= poke.stats.weight %> lbs</p>
+    <p></p>
+</div>
 <%- include("partials/footer"); -%>
