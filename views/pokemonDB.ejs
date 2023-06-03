@@ -3,7 +3,7 @@
         <% pokemonarr.forEach(pokemon=>{ %>
             <div>
                 <img src="<%= pokemon.image.UrlMaleOrUndefined %>" alt="">
-                <div style="margin: auto; text-align: center;" class="name"><%= pokemon.name %></div>
+                <div style="margin: auto; text-align: center;" class="name"><a href="/pokemon/<%=pokemon.name%>" style="color: black;"><%= pokemon.name %></a></div>
             </div>
         <%})%>
     </div>

@@ -33,10 +33,8 @@ app.get("/pokemonDB",async (req, res)=>{
     res.render("pokemonDB", {pokemonarr: pokemonarr});
 })
 
-app.get("/pokemon", async (req, res)=>{
-    const name = req.body.name;
-    console.log(name);
-    const poke =await getPokemon(name);
+app.get("/pokemon/:name", async (req, res)=>{
+    const poke =await getPokemon(req.params.name);
     res.render("pokemon", {poke: poke});
 })
 
